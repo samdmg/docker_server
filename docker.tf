@@ -7,7 +7,7 @@ provider "aws" {
 # Create a remote backend for your terraform 
 terraform {
   backend "s3" {
-    bucket = "samuel-docker-tfstate"
+    bucket = "samdmg.click"
     dynamodb_table = "app-state"
     key    = "LockID"
     region = "us-east-1"
@@ -92,7 +92,7 @@ resource "aws_security_group" "ec2_security_group" {
 }
 
 
-# use data source to get a registered amazon linux 2 ami
+# use data source to get a registered ubuntu ami
 data "aws_ami" "ubuntu" {
 
     most_recent = true
