@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "samuel-docker-tfstate"
+  bucket = "samdmg.click"
      
   lifecycle {
     prevent_destroy = true
